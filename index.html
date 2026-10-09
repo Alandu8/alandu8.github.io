@@ -1,180 +1,226 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Alan Du</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<meta name="description" content="Personal Portfolio" />
-		<meta name="title" property="og:title" content="Personal Portfolio" />
-		<meta property="og:type" content="Personal Portfolio" />
-		<meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51835372328_6a9e4e82b4_z.jpg" />
-		<meta name="description" property="og:description" content="Personal Portfolio" /><meta name="author" content="Alan Du" />
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alan Du</title>
+<meta name="description" content="Alan Du: AI forecasting for trading, with verifiable pipelines and infrastructure. Quant in systematic equity derivatives at Capstone Investment Advisors, New York.">
+<meta property="og:title" content="Alan Du">
+<meta property="og:description" content="AI forecasting for trading, with verifiable pipelines and infrastructure. Quant in systematic equity derivatives at Capstone Investment Advisors, New York.">
+<meta property="og:type" content="profile">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a56db'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#1c1c1e;
+  --muted:#6b6b70;
+  --border:#e6e6e8;
+  --link:#1a56db;
+  --link-hover:#0b3ea8;
+  --chip:#f3f4f6;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#111214;
+    --text:#e8e8ea;
+    --muted:#9a9aa0;
+    --border:#2a2b2f;
+    --link:#7fa8ff;
+    --link-hover:#a9c4ff;
+    --chip:#1b1c20;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111214;
+  --text:#e8e8ea;
+  --muted:#9a9aa0;
+  --border:#2a2b2f;
+  --link:#7fa8ff;
+  --link-hover:#a9c4ff;
+  --chip:#1b1c20;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:17px;
+  line-height:1.65;
+  padding-inline:20px;
+  padding-block:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:680px;margin:0 auto}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+a:hover{color:var(--link-hover)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:2px}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
 
-		<!-- Wrapper -->
-		<!-- // three.js - https://github.com/mrdoob/three.js
-			var THREE=THREE||{REVISION:"56"} -->
-			<div id="wrapper">
-				<div id="particles-js" style="height:100%; width:100%; position:absolute"></div>
-				<!-- Header -->
-					<header id="header">
-						<div class="logo";">
-							<img src="me.jpeg" alt="Me" class="circle">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Alan Du</h1>
-								<p>Quantitative Research | Statistical Arbitrage | Machine Learning</p>
-								<p style="text-align: center; text-transform: lowercase;">Contact: ld3110@columbia.edu</p>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/alan-du-liheng" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/Alandu8" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#about">Edu</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#research">Research</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+/* nav */
+.nav{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;
+  padding-block:20px;
+  border-bottom:1px solid var(--border);
+}
+.nav .brand{font-weight:700;color:var(--text);text-decoration:none;margin-right:auto;font-size:17px}
+.nav a.item{color:var(--text);text-decoration:none;font-size:15px}
+.nav a.item:hover{color:var(--link);text-decoration:underline}
+.theme{
+  font:inherit;font-size:14px;color:var(--muted);background:none;border:1px solid var(--border);
+  border-radius:6px;padding:4px 10px;cursor:pointer;line-height:1.3;
+}
+.theme:hover{color:var(--text);border-color:var(--muted)}
 
-				<!-- Main -->
-					<div id="main">
+/* intro */
+.intro{padding-block:56px 48px}
+.intro .avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;display:block;margin-bottom:24px;border:1px solid var(--border)}
+.intro h1{font-size:36px;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin-bottom:18px}
+.intro p{font-size:18px;line-height:1.65;max-width:62ch}
+.intro p + p{margin-top:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:15px}
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Introduction</h2>
-								<p>I am currently pursuing a degree in Financial Engineering at Columbia University, with a focus on carving out a unique path for myself on Wall Street. As an aspiring quantitative researcher, my core passion lies in translating complex mathematical concepts into practical and deployable code. I enjoy exploring friction and ineffiency of the market using a variety of tools, including Machine Learning, Statistical Modeling, and Quantitative Finance, in order to derive meaningful insights.</a></p>
-								<p>I have prior experience working as a quantitative researcher at HKU CFID (Center of Financial Innovation and Development, the University of Hong Kong), where I successfully navigated a range of challenges related to statistical arbitrage. Throughout my two years there, I was involved in every aspect of strategy development, from ideation to live execution.</p>
-								<p>My interests include trekking, jogging and poker.</p>
-							</article>
+/* sections */
+.section{padding-block:40px;border-top:1px solid var(--border)}
+.section h2{font-size:24px;line-height:1.25;font-weight:700;letter-spacing:-.01em;margin-bottom:22px}
+.section p{max-width:62ch}
+.section p + p{margin-top:12px}
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<div>
-									<h4 style="float:left"> Quantitative Researcher <br />HKU, Center for Financial Innovation and Development</h4>
-									<h4 style="float:right">April 2022 - August 2023</h4>
-								</div>
-								<div>
-									<h4 style="float:left"> Developed 3 statistical arbitrage strategies from scratch and implemented 2 in live trading with above 5 Sharpe since Jan 23
-								</div>
-								<ul style="clear:both;">
-									
-									<li>
-										Constructed one delta-hedge arbitrage strategy on commodities based on the observation of a significant intraday volatility change pattern between U.S. and EU/Asia trading hours. Employed grid search to fine-tune timing and select appropriate option pairs. Incorporated dynamic execution and stop-earn algorithm to increase volume. Earned 2.2% average monthly return with 7.8 Sharpe.
-									</li>
-									<li>
-										Created one rule-based speculation strategy of on-shore and off-shore (Singapore, HK) China equity index futures. Adopted co-integration to explore asynchronous correlation patterns. Conducted quantile analysis and isotonic maximum rank test to determine close out timing conditional on opening price change. Realized average 4.1% monthly return with 5.2 Sharpe.
-									</li>
-									<li>
-										Produced a Spot-Fut arbitrage strategy by investigating mean reversion between XAU and COMEX gold. Revealed a non-monotonic decreasing pattern of the price gap between spot and future gold. Adopted a self-designed predictor to infer the intraday price gap peak. Backtested the predictor and achieved annualized 9% return with 4.7 Sharpe ratio conditional on a < 5% risk-free rate.
-									</li>
-									<li>
-										Connected Python strategies with C-based China Comprehensive Transaction Platform to ensure < 0.05 second execution delay. Transferred ticker-level binary data flow from 4 major Chinese futures exchanges by integrating C shared libraries into Python classes.
-									</li>
-								</ul>
-								<div>
-									<h4 style="float:left"> Collaborated with Dr. Kurt Luo’s team to integrate advanced academic research findings into quantitative trading strategies
-								</div>
-								<ul style="clear:both;">
-									<li>
-										Developed a systematic trading model demo on non-parametric arbitrage timing. Used meta-ML techniques e.g., joint maximization and iterative testing to empower automatic rule and model selection for different assets.
-									</li>
-									<li>
-										Tested the micro price predictability of innovative methods e.g., isotonic maximum rank correlation, kernel and spline regression. Achieved 70%-win rate on average for the next 10 seconds on certain commodities.
-									</li>
-									
-								</ul>
-								
-				
-							<div>
-								<h4 style="float: left;">Quantitative Analyst (Intern)<br />Citic Securities</h4>
-								<h4 style="float:right;">July 2020 - August 2020</h4>
-							</div>
-							<ul style="clear:both;">
-								<li>
-									Identified 10+ revised profit factors of convertible bonds based on underlying stock price, volume and bond terms, e.g., computed the quantile of current convertible premium rate on historical data to find factors have IC over 2%.
-								</li>
-								
-							</ul>
-							</article>
-							
-						</article>
+/* timeline */
+.timeline li{display:grid;grid-template-columns:84px 1fr;column-gap:16px;padding-block:10px}
+.timeline li + li{border-top:1px solid var(--border)}
+.timeline .year{color:var(--muted);font-variant-numeric:tabular-nums;padding-top:1px;white-space:nowrap}
+.timeline .what{max-width:60ch}
 
-						<!-- Research -->
-							<article id="research">
-								<h2 class="major">Research</h2>
-								<div>
-									<h4 style="float:left"> Research with Prof. Stephen Lee <br />HKU Research Fellowship</h4>
-									<h4 style="float:right">January 2022 - September 2022</h4>
-								</div>
-								<ul style="clear:both;">
-									<li>
-										Purposed non-parametric kernel estimator for average treatment effect test under a semi-supervised learning framework.
-									</li>
-									<li>
-										Applied the estimator to help the sector selection algorithm for A shares and improved annualized return by 2% in back-tests.
-									</li>
-								
-								</ul>
-								<div>
-									<h4 style="float:left">Research with Prof. Jeff Yao <br />HKU Capstone Research</h4>
-									<h4 style="float:right">August 2021 - December 2021</h4>
-								</div>
-								<ul style="clear:both;">
-									<li>
-										Analyzed the hypothesis statistical power of all 3 existing multivariate statistical testing methods for high-dimensional datasets.
-									</li>
-									<li>
-										Proved the approximated equality in three methods by simulation with over 100 price and volume features. 
-									</li>
+/* bullet lists */
+.points{display:flex;flex-direction:column;gap:10px;max-width:62ch}
+.points li{position:relative;padding-left:20px;font-size:16px;line-height:1.6}
+.points li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.points strong{font-weight:600}
+.lead{font-size:18px;line-height:1.6;margin-bottom:18px}
+.after{margin-top:20px;font-size:16px;color:var(--muted)}
+.tools{margin-top:20px;font-size:14px;color:var(--muted);line-height:1.7}
 
-								</ul>
-							</ul>
-							</article>
-							
-						</article>
+/* footer */
+.foot{padding-block:28px 56px;border-top:1px solid var(--border);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">Education</h2>
-								<div>
-									<h4 style="float:left;">Columbia University<br />Master of Science, Financial Engineering</h4>
-									<h4 style="float:right;">August 2023 - December 2024</h4>
-								</div>
-								<p style="clear:both;">
-									<i><b>Relevant Coursework:</b></i> Trading Algorithm, Monte-Carlo Simulation Methods, Statistical Analysis and Time Series, Financial Engineering Continuous Time Models, Optimization Models and Methods for Financial Engineering, Machine Learning for Financial Engineering, Stochastic Models, Foundations for Financial Engineering</p>
-								<div>
-									<h4 style="float:left;">The University of Hong Kong<br />Bachelor of Science, Statistics & Finance, First Class Honor</h4>
-									<h4 style="float:right;">August 2018 - December 2022</h4>
-								</div>
-								<p style="clear:both;">
-									<i><b>Relevant Coursework:</b></i> Probability Distributions and Bayesian Probability, Causal Inference, Stochastic Process, High Dimensional Multivariate Data Analysis, Machine Learning, Econometrics, Financial Derivatives, Linear Algebra, Programming in C/C+, R Programming, Python</p>
-							</article>
+@media (max-width:560px){
+  .intro{padding-block:40px 36px}
+  .intro h1{font-size:30px}
+  .intro p{font-size:17px}
+  .timeline li{grid-template-columns:1fr;row-gap:2px}
+}
+@media (prefers-reduced-motion:no-preference){
+  a,button{transition:color .12s ease,border-color .12s ease}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
 
-				</div>
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="#top">Alan Du</a>
+  <a class="item" href="#building">Building</a>
+  <a class="item" href="#work">Work</a>
+  <a class="item" href="#timeline">Timeline</a>
+  <button class="theme" type="button" id="theme" aria-label="Toggle dark mode">Dark</button>
+</nav>
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
-			</div>
+<header class="intro" id="top">
+  <img class="avatar" src="me.jpg" alt="Alan Du" width="84" height="84">
+  <h1 data-edit="h1">Hi, I'm Alan.</h1>
+  <p data-edit="intro1">I work on AI forecasting for trading, and on the verifiable pipelines and infrastructure that make a forecast worth trusting. Currently a quant in systematic equity derivatives at <a href="https://www.capstoneco.com/">Capstone Investment Advisors</a>, a $14bn hedge fund in New York.</p>
+  <div class="links">
+    <a href="mailto:ld3110@columbia.edu">ld3110@columbia.edu</a>
+    <a href="https://www.linkedin.com/in/alan-du-liheng/" rel="me">LinkedIn</a>
+    <a href="https://github.com/alandu8" rel="me">GitHub</a>
+  </div>
+</header>
 
-		<!-- Scripts -->
-			<script src="assets/js/particles.js"></script>
-			<script src="assets/js/wave.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+<main>
+
+<section class="section" id="building">
+  <h2>What I'm building toward</h2>
+  <p class="lead" data-edit="b-lead">Models will soon make most of the forecasts in trading. Whether anyone should trust them is the open problem, and it's the one I'm building around.</p>
+  <ul class="points">
+    <li data-edit="b1"><strong>Forecasts you can audit.</strong> Every call tied to point-in-time inputs, a frozen record of what the model saw, and an outcome label written by the market, not by the modeler.</li>
+    <li data-edit="b2"><strong>Evaluation before capital.</strong> Rolling, live, contamination-proof tests that a model cannot have memorized. A backtest is a claim; a live record is evidence.</li>
+    <li data-edit="b3"><strong>Agents with memory and governance.</strong> Idea generation, review, and execution as separate agents behind audited tools and human gates, with memory that compounds instead of resetting every session.</li>
+    <li data-edit="b4"><strong>Infrastructure as the moat.</strong> The point-in-time archive, the outcome labels, and the running system are what compound. The ideas are the easy part.</li>
+  </ul>
+  <p class="after" data-edit="b-after">I've shipped end to end before: a Mandarin blog platform I founded in my first year at HKU that grew past 100k readers, and the multi-agent AI platform I designed from scratch at Capstone, which the whole desk now runs on daily.</p>
+</section>
+
+<section class="section" id="work">
+  <h2>What I work on</h2>
+  <ul class="points">
+    <li data-edit="w1">Systematic strategies on index futures and options, from signal research to execution logic.</li>
+    <li data-edit="w2">One backtester, one code path, for historical data and live feeds alike.</li>
+    <li data-edit="w3">A crash-risk engine: instantaneous spot and vol shocks, path-dependent Monte Carlo drawdowns, historical regime replay.</li>
+    <li data-edit="w4">A mandate-aware optimizer that turns risk scenarios and client constraints into structuring and allocation decisions.</li>
+    <li data-edit="w5">The team's multi-agent AI platform: orchestration, long-term memory, and an agent that generates and defends trade ideas.</li>
+  </ul>
+  <p class="tools" data-edit="tools">Mostly Python and SQL, some C++ and R. NumPy, pandas, scikit-learn, Dash, Bloomberg.</p>
+</section>
+
+<section class="section" id="timeline">
+  <h2>A brief timeline</h2>
+  <ul class="timeline">
+    <li><span class="year">2018</span><span class="what" data-edit="tl-2018">Started a BS in Statistics at the University of Hong Kong on the HKU Overseas Sponsor Scholarship. Founded Weidu, a Mandarin-language opinion and lifestyle blog that grew to 100k+ readers.</span></li>
+    <li><span class="year">2020</span><span class="what" data-edit="tl-2020">Spent a semester at UC Berkeley as a visiting student.</span></li>
+    <li><span class="year">2022</span><span class="what" data-edit="tl-2022">Graduated with First Class Honours. Stayed on as a quantitative researcher under Prof. Ye Luo, building statistical-arbitrage strategies.</span></li>
+    <li><span class="year">2023</span><span class="what" data-edit="tl-2023">Moved to New York for the MS in Financial Engineering at Columbia.</span></li>
+    <li><span class="year">2024</span><span class="what" data-edit="tl-2024">Summer associate in Quantitative Research, Rates, at J.P. Morgan.</span></li>
+    <li><span class="year">2025</span><span class="what" data-edit="tl-2025">Joined Capstone Investment Advisors as a quantitative analyst. Built the team's AI platform from scratch in the first year.</span></li>
+    <li><span class="year">Now</span><span class="what" data-edit="tl-now">AI forecasting for trading, systematic strategies, and the team's multi-agent system.</span></li>
+  </ul>
+</section>
+
+<section class="section" id="elsewhere">
+  <h2>Elsewhere</h2>
+  <p data-edit="else">Off the desk I'm a marathon runner (Chicago, October 2026) and I trek whenever I can get far enough from a screen. I also play poker: in 2026 I won Education Reform Now's Take 'Em to School tournament in New York, the charity showdown of hedge fund managers that the Alpha Cup in Billions is modeled on.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span data-edit="foot-l">&copy; 2026 Alan Du</span>
+  <span data-edit="foot-r">Last updated October 2026</span>
+</footer>
+
+</div>
+<script>
+(function(){
+  var root=document.documentElement;
+  var btn=document.getElementById('theme');
+  function systemDark(){try{return window.matchMedia('(prefers-color-scheme: dark)').matches;}catch(e){return false;}}
+  function current(){var t=root.getAttribute('data-theme');if(t==='dark'||t==='light')return t;return systemDark()?'dark':'light';}
+  function label(){if(btn)btn.textContent=current()==='dark'?'Light':'Dark';}
+  try{var saved=localStorage.getItem('theme');if(saved==='dark'||saved==='light')root.setAttribute('data-theme',saved);}catch(e){}
+  label();
+  if(btn){btn.addEventListener('click',function(){
+    var next=current()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    label();
+  });}
+
+  var cp=document.getElementById('copy-email');
+  if(cp){cp.addEventListener('click',function(){
+    var v=cp.getAttribute('data-value');
+    function done(){cp.textContent='Copied';cp.setAttribute('data-done','1');setTimeout(function(){cp.textContent='Copy';cp.removeAttribute('data-done');},1600);}
+    function fallback(){var a=document.getElementById('email');if(a&&window.getSelection){var r=document.createRange();r.selectNodeContents(a);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,fallback);}else{fallback();}
+  });}
+})();
+</script>
+</body>
 </html>
